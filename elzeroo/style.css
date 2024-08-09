@@ -1,0 +1,299 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --hightV:33px;
+    --clr:#eee;
+    --sq:40px ;
+}
+body{
+    margin: auto;
+    /* display: flex; */
+    justify-content: center;
+   
+}
+.el{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    height: 100px;
+    width:  100px;
+    color: #FE5622;
+    border-right: 5px solid #FE5622;
+    border-left: 5px solid #03A9F4;
+    border-radius: 50%;
+    margin: auto;
+
+}
+
+.parent{
+    margin: auto;
+    width: 600px;
+    height: 300px;
+    background-color: #eee;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-content: space-between;
+ 
+}
+
+.parent div{
+    box-sizing: border-box;
+    
+    height: 40px;
+    background-color: #FE5622;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: space-between;
+    /* width: 190px; */ flex-basis: 30%;
+
+}
+
+
+
+.parent3{
+    
+
+    width: 600px;
+    height:300px;
+    margin: 10px auto ;
+    background-color: #eee;
+    display: flex;
+    flex-flow: row wrap;
+   
+    justify-content: space-around;
+
+
+}
+
+.parent3 div{
+    width: calc(95% / 3);
+    background-color: #03A9F4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+  .parent3  .six{
+    order: -6;
+}
+
+  .parent3  .three{
+    order: -5;
+align-self: flex-start;
+height:30px;
+}
+
+  .parent3  .four{
+    order: -4;
+}
+
+  .parent3  .five{
+    order:-3;
+}
+
+  .parent3  .two{
+    order: -2;
+}
+  .parent3  .one{
+    align-self: flex-end;
+    height: 30px;
+}
+
+/* #################################################################### */
+
+
+.parent4{
+    width: 600px;
+    height: 300px;
+    background-color: #eee;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.parent4 div{
+    display: flex;
+    background-color: aquamarine;
+    height: calc(95% / 3);
+    align-items: center;
+    justify-content: center;
+}
+
+.parent4 .one{
+    width: 30px;
+}
+
+.parent4 .two{
+    align-self: flex-start;
+    width: 50%;
+}
+.parent4 .three{
+    width: 30px;
+}
+
+
+
+
+.parent5{
+    width: 600px;
+    height: 300px;
+    background-color: #eee;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.parent5 div{
+     display: flex; 
+    font-size: 1.5em;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+
+
+
+.parent5 .one {
+    background-color: #03A9F4;
+    order:2;
+    height: 120px;
+    width: 80px;
+} 
+
+.parent5 .two{
+    background-color: #03f4ac;
+    order:3;
+    height: 120px;
+    width: 80px;
+}
+
+.parent5 .three {
+    background-color: #4b03f4;
+    order:4;
+    height: 120px;
+    width: 80px;
+}
+
+.parent5 .four{
+    background-color: #f403e4;
+    order:1;
+    height: 120px;
+    width: 80px;
+}
+
+.parent5{
+    .four , .two{
+        
+        align-self: flex-end;
+    }
+}
+
+
+
+.header{
+    /* background-color: var(--clr); */
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+
+    height: var(--hightV);
+    width: 5vw;
+    background-color: #eee;
+}
+
+.header .logo , .header .links{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.header .links{
+    height: var(--hightV);
+    background-color: #c1c1c1;
+    list-style: none;
+    width:93vw;
+   
+    padding: 0 5px;
+    justify-content: flex-end;
+    /* justify-content: space-between  ; */
+    margin-left: 10px;
+    li{
+        margin-left: 8px;
+    }
+}
+
+
+
+
+
+
+.main-area{
+    height: 60vh;
+    background-color: #fff;
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content{
+    flex-grow: 1;
+    margin-right: 10px;
+    background-color: var(--clr);
+}
+
+.sidebar{
+    width: 30vw;
+    background-color: var(--clr);
+}
+
+
+
+
+.footer{
+    font-size: 10px;
+    display: flex;
+    /* width: 100vw; */
+    
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    background-color: var(--clr);
+    padding: 0 10px;
+}
+
+
+.white{
+    height: var(--sq) ;
+    width: var(--sq) ;
+    background-color: #fff;
+}
+
+.black{
+    height: var(--sq);
+    width:var(--sq) ;
+    background-color: #000;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: calc( var(--sq) * 8 + 2px);
+    height:240px;
+    border: 1px solid rgb(137, 137, 137);
+}
